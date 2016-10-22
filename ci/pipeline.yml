@@ -15,13 +15,13 @@ jobs:
   - aggregate:
     - put: release-tarball
       params:
-        file: finalized-release/cg-logstash-output-s3-backport-*.tgz
+        file: finalized-release/logstash-output-s3-backport-*.tgz
     - put: final-builds-dir-tarball
       params:
-        file: finalized-release/final-builds-dir-cg-logstash-output-s3-backport.tgz
+        file: finalized-release/final-builds-dir-logstash-output-s3-backport.tgz
     - put: releases-dir-tarball
       params:
-        file: finalized-release/releases-dir-cg-logstash-output-s3-backport.tgz
+        file: finalized-release/releases-dir-logstash-output-s3-backport.tgz
 
 resources:
 - name: release-git-repo
@@ -38,7 +38,7 @@ resources:
   type: s3
   source:
     bucket: {{s3-bosh-releases-bucket}}
-    regexp: cg-logstash-output-s3-backport-(.*).tgz
+    regexp: logstash-output-s3-backport-(.*).tgz
     access_key_id: {{s3-bosh-releases-access-key-id}}
     secret_access_key: {{s3-bosh-releases-secret-access-key}}
     region_name: {{s3-bosh-releases-region}}
@@ -47,7 +47,7 @@ resources:
   type: s3
   source:
     bucket: {{s3-bosh-releases-bucket}}
-    versioned_file: final-builds-dir-cg-logstash-output-s3-backport.tgz
+    versioned_file: final-builds-dir-logstash-output-s3-backport.tgz
     access_key_id: {{s3-bosh-releases-access-key-id}}
     secret_access_key: {{s3-bosh-releases-secret-access-key}}
     region_name: {{s3-bosh-releases-region}}
@@ -56,7 +56,7 @@ resources:
   type: s3
   source:
     bucket: {{s3-bosh-releases-bucket}}
-    versioned_file: releases-dir-cg-logstash-output-s3-backport.tgz
+    versioned_file: releases-dir-logstash-output-s3-backport.tgz
     access_key_id: {{s3-bosh-releases-access-key-id}}
     secret_access_key: {{s3-bosh-releases-secret-access-key}}
     region_name: {{s3-bosh-releases-region}}

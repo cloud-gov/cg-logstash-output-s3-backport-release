@@ -1,0 +1,15 @@
+---
+packages: []
+jobs:
+- name: apply-patch
+  version: 281fb9ad2bb3be23d57a733e85a106b4d27596a8
+  fingerprint: 281fb9ad2bb3be23d57a733e85a106b4d27596a8
+  sha1: b78a3c72dc878abd1805cd6473904c2e1cc66c81
+license:
+  version: f26fbb8045186235ed661742128b0b5c4a4fb22b
+  fingerprint: f26fbb8045186235ed661742128b0b5c4a4fb22b
+  sha1: 340a247425fd2277018002a4111c2aee705536c1
+commit_hash: 6a55ba6b
+uncommitted_changes: true
+name: logstash-output-s3-backport
+version: '2'
