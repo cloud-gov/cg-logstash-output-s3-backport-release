@@ -1,0 +1,9 @@
+---
+name: apply-patch
+templates:
+    pre-start.sh: bin/pre-start
+    s3.patch: config/s3.patch
+
+packages:
+
+properties: {}
